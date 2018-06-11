@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/schema",
+  "id": "SchematicsForJWTSetup",
+  "title": "JWT OverAll Setup Schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "default": "name"
+    },
+    "path": {
+      "type": "string",
+      "default": "app"
+    },
+    "appRoot": {
+      "type": "string"
+    },
+    "sourceDir": {
+      "type": "string",
+      "default": "playground"
+    },
+
+    "module": {
+      "type": "string",
+      "description": "The declaring module.",
+      "alias": "m"
+    },
+
+    "authService": {
+      "type": "string",
+      "default": "",
+      "description": "AuthService to be used for checking logged in state",
+      "alias": "as"
+    }
+  }
+}

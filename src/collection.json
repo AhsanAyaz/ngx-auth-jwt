@@ -1,0 +1,25 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "interceptor": {
+      "description": "Schematic to generate jwt interceptor",
+      "factory": "./interceptor/index#interceptor",
+      "schema": "./interceptor/interceptor.schema.json"
+    },
+    "guard": {
+      "description": "Schematic to generate jwt guard",
+      "factory": "./guard/index#guard",
+      "schema": "./guard/guard.schema.json"
+    },
+    "service": {
+      "description": "Schematic to generate jwt service",
+      "factory": "./service/index#service",
+      "schema": "./service/service.schema.json"
+    },
+    "jwt-setup": {
+      "description": "Schematic to generate overall jwt setup",
+      "factory": "./jwt-setup/index#jwtSetup",
+      "schema": "./jwt-setup/jwt-setup.schema.json"
+    }
+  }
+}
