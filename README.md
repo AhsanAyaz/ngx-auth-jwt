@@ -15,13 +15,33 @@ To just see what the schematic does, run the command below from project root
 ```bash
 schematics .:jwt-setup
 ```
-This would generate the following files
+This would ouput the following 
 
 ```bash
 CREATE /playground/name.service.ts (386 bytes)
 CREATE /playground/name.interceptor.ts (1085 bytes)
 CREATE /playground/name.guard.ts (801 bytes)
 ```
+
+Note that the above does not actually create files on the file system. This is because schematics run in debug by default.
+
+To create the files as well, run the below command (with care):
+```bash
+schematics .:jwt-setup --dry-run=false
+```
+
+Provide a name for the classes (files) generated:
+```bash
+schematics .:jwt-setup --name=Auth --dry-run=false
+```
+
+The above will output:
+```bash
+CREATE /playground/auth.service.ts (386 bytes)
+CREATE /playground/auth.interceptor.ts (1085 bytes)
+CREATE /playground/auth.guard.ts (801 bytes)
+```
+
 #### Parameters
 | Name | Description | Default |
 |---|---|---|
